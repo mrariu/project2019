@@ -1,4 +1,26 @@
-﻿using System;
+﻿/***************************************************************************/
+/*project_2019_avionics
+ * 製作者：村上瑠[Twitter：riu(bird)-@MURakami_bird]
+ * 
+ * 搭載機器：回転数計、高度計、対気速度計、
+ * 
+ * 操舵システム：FBW（wiiヌンチャク⇔Arduino⇔LTC485CN8⇔RS405CB・RS406CB）
+ * 
+ * システム概要
+ * 
+ * windous_10_mobile------Arduino-----------CNZ1023(フォトインタラプタ)
+ *                    |                  |
+ *                    |--ジャイロセンサ  |--HC-SR04(超音波センサ)
+ *                    |                  |
+ *                     --GPSセンサ        --MPXV7002DP(差圧センサ)
+ *        
+ *                                  
+ *                                  
+ ***************************************************************************/
+
+
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +44,7 @@ namespace Cake1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
