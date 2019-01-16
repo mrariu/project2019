@@ -43,7 +43,8 @@
 		<TextBlock x:Name="altitude_val" HorizontalAlignment="Left" Height="52" Margin="249,485,0,0" Text="00.0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Foreground="#FF6EFF00" FontSize="36"/>
 		<ToggleSwitch x:Name="rogger_switch" Header="●REC" HorizontalAlignment="Left" Height="64" Margin="18,526,0,0" VerticalAlignment="Top" Width="89" Foreground="#FF6EFF00"/>
 		<TextBox x:Name="connect_indicater" HorizontalAlignment="Left" Margin="10,424,0,0" Text="serial connect=" VerticalAlignment="Top" Width="170"/>
-		<TextBlock x:Name="serial_connect" HorizontalAlignment="Left" Margin="132,429,0,0" Text="close" TextWrapping="Wrap" VerticalAlignment="Top"/>
+		<TextBlock x:Name="connect_state" HorizontalAlignment="Left" Margin="132,429,0,0" Text="close" TextWrapping="Wrap" VerticalAlignment="Top"/>
+		<Button x:Name="serial_connect_button" Content="connect" HorizontalAlignment="Left" Height="43" Margin="105,531,0,0" VerticalAlignment="Top" Width="72"/>
 
 	</Grid>
 </Page>
