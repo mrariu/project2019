@@ -12,8 +12,9 @@
 		<TextBlock x:Name="value" HorizontalAlignment="Left" Height="91" Margin="234,231,0,0" Text="0.00" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontSize="48"/>
 		<TextBox x:Name="cad_label" HorizontalAlignment="Left" Height="64" Margin="10,231,0,0" Text="cadence=" VerticalAlignment="Top" Width="219" FontSize="48"/>
 		<Button x:Name="connect_button" Content="CONNECT!" HorizontalAlignment="Left" Height="75" Margin="213,468,0,0" VerticalAlignment="Top" Width="109"/>
-		<TextBlock x:Name="serial_state" HorizontalAlignment="Left" Height="59" Margin="32,381,0,0" Text="port1=" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="48"/>
+		<TextBlock x:Name="serial_state" HorizontalAlignment="Left" Height="59" Margin="32,381,0,0" Text="port1=" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="48"/>
 		<Button x:Name="setting" Content="SETTING" HorizontalAlignment="Left" Height="75" Margin="32,468,0,0" VerticalAlignment="Top" Width="109"/>
+		<TextBlock HorizontalAlignment="Left" Margin="185,403,0,0" Text="Close" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="83" FontSize="20"/>
 
 	</Grid>
 </Page>
