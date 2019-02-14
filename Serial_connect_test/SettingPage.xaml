@@ -10,8 +10,9 @@
 
 	<Grid>
 		<TextBox HorizontalAlignment="Center" Height="340" Margin="0,104,0,0" Text="Port Select" VerticalAlignment="Top" Width="280" FontSize="24"/>
-		<ComboBox HorizontalAlignment="Center" Margin="0,204,0,0" VerticalAlignment="Top" Width="188"/>
-		<Button Content="OK" HorizontalAlignment="Center" Height="72" VerticalAlignment="Center" Width="91"/>
+		<ComboBox x:Name="port_name" HorizontalAlignment="Center" Margin="0,204,0,0" VerticalAlignment="Top" Width="188"/>
+		<Button x:Name="OK_button" Content="OK" HorizontalAlignment="Center" Height="72" VerticalAlignment="Center" Width="91" Click="OK_Button_Click"/>
+		<Button x:Name="reload_button" Content="port reload" HorizontalAlignment="Left" Height="33" Margin="54,397,0,0" VerticalAlignment="Top" Width="97" Click="Reload_button_Click"/>
 
 	</Grid>
 </Page>

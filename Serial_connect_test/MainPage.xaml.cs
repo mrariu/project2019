@@ -26,5 +26,10 @@ namespace Serial_connect_test
         {
             this.InitializeComponent();
         }
-    }
+
+		private void Setting_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(BlankPage1));
+		}
+	}
 }
