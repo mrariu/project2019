@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using Windows.Devices.Enumeration;
+using Windows.Devices.SerialCommunication;
+using Windows.Storage.Streams;
 
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=234238 を参照してください
 
@@ -39,6 +43,8 @@ namespace Serial_connect_test
 
 		private async void reload_function()
 		{
+			port_name.Items.Clear();
+
 			string aqs = SerialDevice.GetDeviceSelector();
 			var deviceCollection = await DeviceInformation.FindAllAsync(aqs);
 			List<string> portNamesList = new List<string>();
@@ -46,7 +52,7 @@ namespace Serial_connect_test
 			{
 				var serialDevice = await SerialDevice.FromIdAsync(item.Id);
 				var portName = serialDevice.PortName;
-				portNamesList.Add(portName);
+				port_name.Items.Add(portName);
 			}
 		}
 	}
