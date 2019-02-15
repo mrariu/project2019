@@ -31,5 +31,10 @@ namespace Serial_connect_test
 		{
 			this.Frame.Navigate(typeof(BlankPage1));
 		}
+
+		private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
