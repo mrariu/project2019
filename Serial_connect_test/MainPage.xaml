@@ -11,7 +11,7 @@
 	<Grid>
 		<TextBlock x:Name="value" HorizontalAlignment="Left" Height="59" Margin="209,231,0,0" Text="0.00" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontSize="48"/>
 		<Button x:Name="connect_button" Content="CONNECT!" HorizontalAlignment="Left" Height="75" Margin="213,468,0,0" VerticalAlignment="Top" Width="109"/>
-		<TextBlock x:Name="serial_state" HorizontalAlignment="Center" Height="59" Margin="0,320,0,0" Text="Port1=" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="36"/>
+		<TextBlock x:Name="serial_state" HorizontalAlignment="Left" Height="59" Margin="98,320,0,0" Text="Port1=" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="36"/>
 		<Button x:Name="setting" Content="SETTING" HorizontalAlignment="Left" Height="75" Margin="32,468,0,0" VerticalAlignment="Top" Width="109" Click="Setting_Click"/>
 		<TextBlock HorizontalAlignment="Left" Margin="220,331,0,0" Text="Close" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="83" FontSize="24"/>
 		<TextBlock HorizontalAlignment="Left" Height="64" Margin="48,239,0,0" Text="Cadence=" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" SelectionChanged="TextBlock_SelectionChanged" FontSize="36"/>

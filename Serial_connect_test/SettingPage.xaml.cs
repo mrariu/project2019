@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Windows.Devices.Enumeration;
 using Windows.Devices.SerialCommunication;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=234238 を参照してください
 
@@ -46,25 +47,26 @@ namespace Serial_connect_test
 			port_name.Items.Clear();
 
 			
-			string aqs = SerialDevice.GetDeviceSelector();
+			string aqs = SerialDevice.GetDeviceSelector(); //aqs=AdvancedQuerySyntax文字列
 			var deviceCollection = await DeviceInformation.FindAllAsync(aqs);
 			List<string> portNamesList = new List<string>();
 			foreach (var item in deviceCollection)
 			{
 				var serialDevice = await SerialDevice.FromIdAsync(item.Id);
-				var portName = serialDevice.PortName;
-				port_name.Items.Add(portName);
-			}
-			/*
-			string aqs= SerialDevice.GetDeviceSelector(); //aqs=AdvancedQuerySyntax文字列
-			var deviceCollection = await DeviceInformation.FindAllAsync(aqs);
-			List<string> portNamesList = new List<string>();
-			foreach(var item in deviceCollection)
-			{
-				var serialDevice = await SerialDevice.FromIdAsync(item.Id);
 
-				port_name.Items.Add(serialDevice);
-			}*/
+				if (serialDevice != null)
+				{
+					var portName = serialDevice.PortName;
+					portNamesList.Add(portName);
+					port_name.Items.Add(portNamesList.ToArray());
+				}
+				else
+				{
+					MessageDialog md = new MessageDialog("COMポートが認識されてません。");
+					await md.ShowAsync();
+				}
+			}
+
 		}
 	}
 }
