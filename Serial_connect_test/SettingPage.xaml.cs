@@ -46,7 +46,7 @@ namespace Serial_connect_test
 		{
 			port_name.Items.Clear();
 
-			/*
+			
 			string aqs = SerialDevice.GetDeviceSelector(); //aqs=AdvancedQuerySyntax文字列
 			var deviceCollection = await DeviceInformation.FindAllAsync(aqs);
 			List<string> portNamesList = new List<string>();
@@ -67,7 +67,7 @@ namespace Serial_connect_test
 				}
 				
 			}
-			*/
+			
 		}
 	}
 }
